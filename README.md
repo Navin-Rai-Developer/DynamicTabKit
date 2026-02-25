@@ -1,41 +1,87 @@
+![iOS CI](https://github.com/Navin-Rai-Developer/DynamicTabKit/actions/workflows/main.yml/badge.svg)
 # DynamicTabKit
-A production-ready SwiftUI project demonstrating a fully dynamic, user-customizable tab bar. Users start with 3 default tabs and can add, remove, or reorder tabs anytime from the Settings screen - all powered by a centralized TabStore using ObservableObject.
 
-✨ Features
+A production-ready SwiftUI project demonstrating a fully dynamic, user-customizable Tab Bar architecture.  
 
-✅ 3 default tabs on first launch (Home, Profile, Settings)
+Users start with 3 default tabs and can add, remove, or reorder tabs anytime from the Settings screen — powered by a centralized state manager built with ObservableObject.
 
-✅ Add or remove tabs dynamically from Settings
+---
 
-✅ Core tabs (Home, Profile, Settings) are protected — cannot be removed
+## ✨ Features
 
-✅ Tab selection state resets safely when an active tab is removed
+- ✅ 3 default tabs on first launch (Home, Profile, Settings)
+- ✅ Add or remove tabs dynamically from Settings
+- ✅ Core tabs (Home, Profile, Settings) are protected — cannot be removed
+- ✅ Tab selection resets safely when the active tab is removed
+- ✅ SF Symbols support for every tab item
+- ✅ Centralized state via `TabBarManager` (No `@Binding` prop drilling)
+- ✅ Full SwiftUI Previews on all views
+- ✅ Clean MVVM-style architecture
+- ✅ CI-enabled with GitHub Actions
 
-✅ Label with SF Symbols icon on every tab item
+---
 
-✅ Centralized state via TabStore — no @Binding prop drilling
+## 🏗 Architecture
 
-✅ Full SwiftUI Previews on every view
+**Pattern:** MVVM  
+**State Management:** ObservableObject-based TabStore  
+**UI Framework:** SwiftUI  
 
-✅ Clean MVVM-style architecture, ready to extend
+Project Structure:
+DynamicTabKit/
+├── Model/
+├── View/
+│   ├── Setting/
+│   └── Tab/
+├── ViewModel/
+└── DynamicTabKitApp.swift
+---
 
-🚀 Setup & Installation
+## 🚀 Setup & Installation
 
-Requirements
+### Requirements
 
-ToolMinimum 
+| Tool | Version |
+|------|----------|
+| Xcode | 15.0+ |
+| iOS Deployment Target | 17.0+ |
+| Swift | 5.9+ |
+| macOS (Development) | Ventura 13.0+ |
 
-VersionXcode15.0+
+### Run Locally
 
-iOS Deployment Target17.0+
+1. Clone the repository
+2. Open `DynamicTabKit.xcodeproj`
+3. Select the `DynamicTabKit` scheme
+4. Run on iOS Simulator
 
-Swift5.9+
+---
 
-macOS (for development)Ventura 13.0+
+## 🧠 Engineering Highlights
 
-🙋‍♂️ Author
-Navin Rai
+- Safe state reset handling
+- Clean separation of concerns
+- Extensible tab architecture
+- Production-ready folder structure
+- No prop-drilling anti-pattern
+- CI pipeline enabled
 
-GitHub: @Navin-Rai-Developer
+---
 
-LinkedIn: https://www.linkedin.com/in/navinkumarrai
+## 📦 CI Status
+
+GitHub Actions automatically builds the project on every push to `main`.
+
+---
+
+## 🙋‍♂️ Author
+
+**Navin Rai**  
+Senior iOS Developer  
+
+- GitHub: [@Navin-Rai-Developer](https://github.com/Navin-Rai-Developer)
+- LinkedIn: https://www.linkedin.com/in/navinkumarrai
+
+---
+
+⭐ If you find this useful, consider starring the repository.
